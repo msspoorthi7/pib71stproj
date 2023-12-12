@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<!--to load static file-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeApp</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+<body>
+<h1>App Home page being rendered from templates folder</h1>
+<h3 style="color:blue;">BTS</h3>
+Enter your full name <input type="text">
+
+<input type="button" name="Click Me">
+<h3> My level of thinking is at {{insert_me}} </h3>
+<br>
+<h4> 1,2,3,... Hi we are BTS {{Army}}</h4>
+
+<form method="POST">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="submit">
+
+</form>
+<h4>We can look at ourselves as a spike of dust or some one made out of {{s}} and very special</h4>
+
+<h3>Did you know that there are  {{n}} stars in our milkyway galaxy and there are billions of such galaxies </h3>
+<img src="{%static 'images/galaxy.jpeg'%}">
+</body>
+</html>
